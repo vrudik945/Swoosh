@@ -1,4 +1,4 @@
-package com.v_rudik.swoosh
+package com.v_rudik.swoosh.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
