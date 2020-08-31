@@ -2,9 +2,9 @@ package com.v_rudik.swoosh.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.v_rudik.swoosh.Model.Player
 import com.v_rudik.swoosh.R
-import com.v_rudik.swoosh.Utilities.EXTRA_LEAGUE
-import com.v_rudik.swoosh.Utilities.EXTRA_SKILL
+import com.v_rudik.swoosh.Utilities.EXTRA_PLAYER
 
 class FinishActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,8 +12,7 @@ class FinishActivity : AppCompatActivity() {
         setContentView(R.layout.activity_finish)
     }
 
-    val league = intent.getStringExtra(EXTRA_LEAGUE)
-    val skill = intent.getStringExtra(EXTRA_SKILL)
+        val player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)
 
-    searchLeaguesText.text = "Looking for a $league $skill league near you"
+    searchLeaguesText.text = "Looking for a ${player.league} ${player.skill} league near you"
 }
